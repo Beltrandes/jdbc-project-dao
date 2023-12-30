@@ -9,10 +9,11 @@ import java.util.Date;
 public class Program {
     public static void main(String[] args) {
 
-        var obj = new Department(1, "Books");
-
-        var seller = new Seller(1, "Beltrandes", "beltrandes@gmail.com", new Date(), 3000.0, obj);
-
         var sellerDao = DaoFactory.createSellerDao();
+
+        System.out.println("=== TEST: 1 seller findById ===");
+        var seller = sellerDao.findById(3);
+
+        System.out.println(seller);
     }
 }
